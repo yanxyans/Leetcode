@@ -8,7 +8,7 @@ public class Permute {
         return permuteHelp(nums, 0, nums.length);
     }
     
-    public List<List<Integer>> permuteHelp(int[] nums, int start, int end) {
+    private List<List<Integer>> permuteHelp(int[] nums, int start, int end) {
     	List<List<Integer>> ret = new ArrayList<List<Integer>>();
     	
     	if (start >= end) {
