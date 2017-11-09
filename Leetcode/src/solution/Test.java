@@ -9,8 +9,11 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		ReverseBits test = new ReverseBits();
-		int ret = test.reverseBits(1);
-		System.out.println(ret);
+		InorderTraversal test = new InorderTraversal();
+		TreeNode root = new TreeNode(1);
+		root.right = new TreeNode(2);
+		root.right.left = new TreeNode(3);
+		List<Integer> res = test.inorderTraversal(root);
+		System.out.println(res);
 	}
 }
