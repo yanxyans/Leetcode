@@ -9,9 +9,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		String str = "Hello World";
-		LengthOfLastWord test = new LengthOfLastWord();
-		int len = test.lengthOfLastWord(str);
-		System.out.println(len);
+		ReverseBits test = new ReverseBits();
+		int ret = test.reverseBits(1);
+		System.out.println(ret);
 	}
 }
