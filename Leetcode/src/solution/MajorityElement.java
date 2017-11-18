@@ -1,8 +1,5 @@
 package solution;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MajorityElement {
     public int majorityElement(int[] nums) {
     	int ret = -1;

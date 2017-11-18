@@ -1,7 +1,5 @@
 package solution;
 
-import java.util.Arrays;
-
 public class AddBinary {
     public String addBinary(String a, String b) {
         int m = a.length();

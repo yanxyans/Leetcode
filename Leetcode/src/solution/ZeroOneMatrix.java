@@ -1,8 +1,5 @@
 package solution;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ZeroOneMatrix {
     public int[][] updateMatrix(int[][] matrix) {
         int m = matrix.length;

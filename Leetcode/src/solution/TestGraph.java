@@ -10,6 +10,11 @@ import org.jfree.ui.ApplicationFrame;
 
 public class TestGraph extends ApplicationFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public TestGraph(final String title, final int[][] points) {
 	
 	   super(title);
