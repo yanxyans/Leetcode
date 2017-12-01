@@ -1,7 +1,5 @@
 package solution;
 
-import java.util.Arrays;
-
 public class IsValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         int m = board.length;
