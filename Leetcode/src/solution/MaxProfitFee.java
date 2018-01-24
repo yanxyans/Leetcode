@@ -1,6 +1,6 @@
 package solution;
 
-public class MaxProfit {
+public class MaxProfitFee {
 	public int maxProfit(int[] prices, int fee) {
 		int n = prices.length;
 		if (n < 1) {

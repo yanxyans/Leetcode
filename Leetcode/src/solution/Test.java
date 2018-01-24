@@ -1,13 +1,15 @@
 package solution;
 
+import java.util.List;
+
 public class Test {
 
 	public static void main(String[] args) {
 		
-		String[] data = new String[] {"5","2","C","D","+"};
-		BaseballGame test = new BaseballGame();
-		int ret = test.calPoints(data);
-		System.out.println(ret);
+		MaxProfitTwo maxProfitTwo = new MaxProfitTwo();
+		int[] prices = new int[] {1,2};
+		int profit = maxProfitTwo.maxProfit(prices);
+		System.out.println(profit);
 	}
 
 }
