@@ -6,10 +6,10 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		MaxProfitTwo maxProfitTwo = new MaxProfitTwo();
-		int[] prices = new int[] {1,2};
-		int profit = maxProfitTwo.maxProfit(prices);
-		System.out.println(profit);
+		FindDuplicates findDuplicates = new FindDuplicates();
+		int[] nums = new int[] {4,3,2,7,8,2,3,1};
+		List<Integer> dups = findDuplicates.findDuplicates(nums);
+		System.out.println(dups);
 	}
 
 }
