@@ -17,6 +17,8 @@ public class Test {
 		test(threeSum, nums1);
 		int[] nums2 = new int[] {-2, -2, -1, 0, 0, 1, 2, 2, 3, 4};
 		test(threeSum, nums2);
+		int[] nums3 = new int[] {0, 0, 0};
+		test(threeSum, nums3);
 	}
 
 	public static void test(ThreeSum threeSum, int[] nums) {

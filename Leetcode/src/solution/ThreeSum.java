@@ -17,12 +17,14 @@ public class ThreeSum {
         	for (int j = i + 1; j < nums.length; j++) {
         		if (seen.contains(-target -nums[j])) {
         			trip.add(Arrays.asList(target, nums[j], -target -nums[j]));
+                    while (j < nums.length - 1 && nums[j] == nums[j + 1]) j++;
+                    while (i < nums.length - 1 && nums[i] == nums[i + 1]) i++;
         		}
         		seen.add(nums[j]);
-        		while (j < nums.length - 1 && nums[j] == nums[j + 1]) j++;
+        		
         	}
         	seen.clear();
-        	while (i < nums.length - 1 && nums[i] == nums[i + 1]) i++;
+        	
         }
         
         return trip;
