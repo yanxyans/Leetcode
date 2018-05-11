@@ -14,17 +14,18 @@ public class MergeIntervals {
 	 *     Interval(int s, int e) { start = s; end = e; }
 	 * }
 	 */
-	public List<Interval> merge(List<Interval> intervals) {
+    public List<Interval> merge(List<Interval> intervals) {
 		ArrayList<Interval> ret = new ArrayList<Interval>();
+        intervals.sort((a,b) -> a.start-b.start);
 		
-		Collections.sort(intervals, new IntervalComparator());
-
 		int size = intervals.size();
 		for (int i = 0; i < size; i++) {
 			Interval ma = intervals.get(i);
-			while (i < size - 1 && intervals.get(i + 1).start <= ma.end) i++;
-			Interval mb = intervals.get(i);
-			ret.add(new Interval(ma.start, mb.end));
+			while (i < size - 1 && intervals.get(i + 1).start <= ma.end) {
+                ma.end = Math.max(ma.end, intervals.get(i + 1).end);
+                i++;
+            }
+			ret.add(new Interval(ma.start, ma.end));
 		}
 		
 		return ret;
