@@ -10,7 +10,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		ThreeSum threeSum = new ThreeSum();
+/*		ThreeSum threeSum = new ThreeSum();
 		int[] nums = new int[] {-1, 0, 1, 2, -1, -4};
 		test(threeSum, nums);
 		int[] nums1 = new int[] {-1, -1, 0, 0, 1, 1, -2, 2};
@@ -18,7 +18,21 @@ public class Test {
 		int[] nums2 = new int[] {-2, -2, -1, 0, 0, 1, 2, 2, 3, 4};
 		test(threeSum, nums2);
 		int[] nums3 = new int[] {0, 0, 0};
-		test(threeSum, nums3);
+		test(threeSum, nums3);*/
+		
+		
+		// [[1,3],[2,6],[8,10],[15,18]]
+		ArrayList<Interval> intervals = new ArrayList<Interval>();
+		intervals.add(new Interval(1, 4));
+		intervals.add(new Interval(4, 5));
+		intervals.add(new Interval(8, 10));
+		intervals.add(new Interval(15, 18));
+		MergeIntervals mergeIntervals = new MergeIntervals();
+		List<Interval> merged = mergeIntervals.merge(intervals);
+		System.out.println(merged.size());
+		for (Interval m : merged) {
+			System.out.println(m.start + ", " + m.end);
+		}
 	}
 
 	public static void test(ThreeSum threeSum, int[] nums) {
