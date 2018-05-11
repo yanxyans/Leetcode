@@ -23,8 +23,8 @@ public class Test {
 		
 		// [[1,3],[2,6],[8,10],[15,18]]
 		ArrayList<Interval> intervals = new ArrayList<Interval>();
+		intervals.add(new Interval(0, 4));
 		intervals.add(new Interval(1, 4));
-		intervals.add(new Interval(4, 5));
 		intervals.add(new Interval(8, 10));
 		intervals.add(new Interval(15, 18));
 		MergeIntervals mergeIntervals = new MergeIntervals();

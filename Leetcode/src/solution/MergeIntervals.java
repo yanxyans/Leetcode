@@ -1,6 +1,7 @@
 package solution;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MergeIntervals {
@@ -16,6 +17,8 @@ public class MergeIntervals {
 	public List<Interval> merge(List<Interval> intervals) {
 		ArrayList<Interval> ret = new ArrayList<Interval>();
 		
+		Collections.sort(intervals, new IntervalComparator());
+
 		int size = intervals.size();
 		for (int i = 0; i < size; i++) {
 			Interval ma = intervals.get(i);
