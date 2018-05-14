@@ -34,10 +34,16 @@ public class Test {
 			System.out.println(m.start + ", " + m.end);
 		}*/
 		
-		int[] a = new int[]{5,4,5,2,1};
+		/*int[] a = new int[]{5,5,1,5,5,2,3};
 		IncreasingTriplet it = new IncreasingTriplet();
 		boolean ret = it.increasingTriplet(a);
 		System.out.println(ret);
+		System.out.println(Arrays.toString(a));*/
+		
+		TitleToNumber ttn = new TitleToNumber();
+		String s = "ZYS";
+		int num = ttn.titleToNumber(s);
+		System.out.println("s=" + s + ", num=" + num);
 	}
 
 	public static void test(ThreeSum threeSum, int[] nums) {
