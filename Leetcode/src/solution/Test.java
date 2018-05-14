@@ -22,7 +22,7 @@ public class Test {
 		
 		
 		// [[1,3],[2,6],[8,10],[15,18]]
-		ArrayList<Interval> intervals = new ArrayList<Interval>();
+/*		ArrayList<Interval> intervals = new ArrayList<Interval>();
 		intervals.add(new Interval(0, 4));
 		intervals.add(new Interval(1, 4));
 		intervals.add(new Interval(8, 10));
@@ -32,7 +32,12 @@ public class Test {
 		System.out.println(merged.size());
 		for (Interval m : merged) {
 			System.out.println(m.start + ", " + m.end);
-		}
+		}*/
+		
+		int[] a = new int[]{5,4,5,2,1};
+		IncreasingTriplet it = new IncreasingTriplet();
+		boolean ret = it.increasingTriplet(a);
+		System.out.println(ret);
 	}
 
 	public static void test(ThreeSum threeSum, int[] nums) {
