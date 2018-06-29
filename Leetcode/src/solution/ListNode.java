@@ -9,4 +9,8 @@ public class ListNode {
 		this.key = key;
 		this.val = val;
 	}
+	
+	public ListNode(int val) {
+		this(0, val);
+	}
 }
