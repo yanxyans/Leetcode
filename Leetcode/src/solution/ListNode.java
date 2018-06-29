@@ -1,10 +1,12 @@
 package solution;
 
 public class ListNode {
-	int val;
-	ListNode next;
+	public int key;
+	public int val;
+	public ListNode next;
 	
-	ListNode(int x) {
-		val = x;
+	public ListNode(int key, int val) {
+		this.key = key;
+		this.val = val;
 	}
 }
