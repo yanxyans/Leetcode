@@ -25,6 +25,16 @@ public class Test {
 		System.out.println(linkedList.remove().val);
 		System.out.println(linkedList.remove());*/
 		
-		
+		CustomHashMap map = new CustomHashMap();
+		for (int i = 0; i < 20; i++) {
+			map.put(i, i);
+		}
+		int ret = map.get(5);
+		System.out.println(ret);
+		System.out.println(map.size());
+		map.put(40, 40);
+		System.out.println(map.get(40));
+		System.out.println(map.get(0));
+		System.out.println(map.toString());
 	}
 }

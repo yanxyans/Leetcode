@@ -64,4 +64,19 @@ public class CustomLinkedList {
 		node.val = val;
 		return ret;
 	}
+	
+	public String toString() {
+		StringBuilder s = new StringBuilder();
+		ListNode node = head;
+		int cnt = 0;
+		while (node != null) {
+			if (cnt >= 1) {
+				s.append(" -> ");
+			}
+			s.append("{" + node.key + ", " + node.val + "}");
+			cnt++;
+			node = node.next;
+		}
+		return s.toString();
+	}
 }

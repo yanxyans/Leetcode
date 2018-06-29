@@ -65,4 +65,14 @@ public class CustomHashMap {
 		ListNode ret = map[index].get(key);
 		return ret == null ? null : ret.val;
 	}
+	
+	public String toString() {
+		StringBuilder s = new StringBuilder();
+		for (int i = 0; i < map.length; i++) {
+			s.append("index " + i + ": ");
+			s.append(map[i].toString());
+			s.append(System.lineSeparator());
+		}
+		return s.toString();
+	}
 }
