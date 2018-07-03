@@ -25,7 +25,7 @@ public class Test {
 		System.out.println(linkedList.remove().val);
 		System.out.println(linkedList.remove());*/
 		
-		CustomHashMap map = new CustomHashMap();
+		/*CustomHashMap map = new CustomHashMap();
 		for (int i = 0; i < 20; i++) {
 			map.put(i, i);
 		}
@@ -35,6 +35,14 @@ public class Test {
 		map.put(40, 40);
 		System.out.println(map.get(40));
 		System.out.println(map.get(0));
-		System.out.println(map.toString());
+		System.out.println(map.toString());*/
+		
+		AppleStand appleStand = new AppleStand();
+		System.out.println(appleStand.buyApples(3000, 80000, 20));
+		System.out.println(appleStand.buyApples(6000, 15000, 10));
+		System.out.println(appleStand.buyApples(17000, 20000, 10));
+		
+		System.out.println(appleStand.sellApples(18000, 5));
+		System.out.println(appleStand.sellApples(30000, 10));
 	}
 }
