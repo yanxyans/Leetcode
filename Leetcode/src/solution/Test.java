@@ -37,17 +37,17 @@ public class Test {
 		System.out.println(map.get(0));
 		System.out.println(map.toString());*/
 		
-		/*AppleStand appleStand = new AppleStand();
+		AppleStand appleStand = new AppleStand();
 		System.out.println(appleStand.buyApples(3000, 80000, 20));
 		System.out.println(appleStand.buyApples(6000, 15000, 10));
 		System.out.println(appleStand.buyApples(17000, 20000, 10));
 		
 		System.out.println(appleStand.sellApples(18000, 5));
-		System.out.println(appleStand.sellApples(30000, 10));*/
+		System.out.println(appleStand.sellApples(30000, 10));
 		
-		long[] nums = new long[] {222231231, 911, 9112, 55551023, 12, 13, 123, 133, 134, 1345};
+		/*long[] nums = new long[] {222231231, 911, 9112, 55551023, 12, 13, 123, 133, 134, 1345};
 		OrderPhoneBook orderPhoneBook = new OrderPhoneBook();
-		System.out.println(Arrays.toString(orderPhoneBook.orderPhoneBook2(nums)));
+		System.out.println(Arrays.toString(orderPhoneBook.orderPhoneBook2(nums)));*/
 		
 		/*int i = 1;
 		boolean b = true;

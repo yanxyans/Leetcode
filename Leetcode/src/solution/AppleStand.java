@@ -10,40 +10,44 @@ public class AppleStand {
 		time = now;
 		apples.put(expiry, apples.getOrDefault(expiry, 0) + volume);
 		
-		Integer k = apples.firstKey();
-		while (k != null && k <= time) {
-			apples.remove(k);
-			k = apples.firstKey();
-		}
+		Iterator<Map.Entry<Integer, Integer>> it = apples.entrySet().iterator();
 		int cnt = 0;
-		Iterator<Integer> it = apples.values().iterator();
 		while (it.hasNext()) {
-			cnt += (int)it.next();
+			Map.Entry<Integer, Integer> next = it.next();
+			if (next.getKey() <= time) {
+				it.remove();
+			} else {
+				cnt += next.getValue();
+			}
 		}
 		return cnt;
 	}
 	
 	public int sellApples(int now, int volume) {
 		time = now;
-		Integer k = apples.firstKey();
-		while (k != null && k < time) {
-			apples.remove(k);
-			k = apples.firstKey();
-		}
-		while (k != null && apples.get(k) <= volume) {
-			int val = apples.remove(k);
-			volume -= val;
-			k = apples.firstKey();
-		}
-		if (volume > 0) {
-			int val = apples.get(k);
-			apples.put(k, val - volume);
-			volume = 0;
-		}
+		
+		Iterator<Map.Entry<Integer, Integer>> it = apples.entrySet().iterator();
 		int cnt = 0;
-		Iterator<Integer> it = apples.values().iterator();
 		while (it.hasNext()) {
-			cnt += (int)it.next();
+			Map.Entry<Integer, Integer> next = it.next();
+			if (next.getKey() < time) {
+				it.remove();
+			} else {
+				if (volume > 0) {
+					int numApples = next.getValue();
+					if (numApples <= volume) {
+						volume -= numApples;
+						it.remove();
+					} else {
+						int diff = numApples - volume;
+						apples.put(next.getKey(), diff);
+						volume = 0;
+						cnt += diff;
+					}
+				} else {
+					cnt += next.getValue();
+				}
+			}
 		}
 		return cnt;
 	}
